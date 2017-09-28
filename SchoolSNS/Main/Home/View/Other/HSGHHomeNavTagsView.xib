@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="akw-6y-1mV" customClass="HSGHHomeNavTagsView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVC-XJ-lNR">
+                    <rect key="frame" x="0.0" y="3.5" width="125" height="37"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <state key="normal" title="好友">
+                        <color key="titleColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="homeTagsBtnClicked:" destination="akw-6y-1mV" eventType="touchUpInside" id="JE1-Nb-94I"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXa-wB-PrK">
+                    <rect key="frame" x="125" y="3.5" width="125" height="37"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <state key="normal" title="附近">
+                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="homeTagsBtnClicked:" destination="akw-6y-1mV" eventType="touchUpInside" id="jsC-YL-7W5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJz-5Y-9Lm">
+                    <rect key="frame" x="250" y="3.5" width="125" height="37"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <state key="normal" title="全网">
+                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="homeTagsBtnClicked:" destination="akw-6y-1mV" eventType="touchUpInside" id="GSh-0R-3Mi"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mge-F8-v8I">
+                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="HeO-op-F59"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-u2-Fa4">
+                    <rect key="frame" x="-0.5" y="43" width="125" height="1"/>
+                    <color key="backgroundColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="5Fj-cR-xBz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bXa-wB-PrK" firstAttribute="height" secondItem="oVC-XJ-lNR" secondAttribute="height" id="40G-h3-Ld1"/>
+                <constraint firstItem="JJz-5Y-9Lm" firstAttribute="leading" secondItem="bXa-wB-PrK" secondAttribute="trailing" id="9dB-bb-0Cz"/>
+                <constraint firstAttribute="bottom" secondItem="mge-F8-v8I" secondAttribute="bottom" id="CBN-47-eEH"/>
+                <constraint firstItem="mge-F8-v8I" firstAttribute="leading" secondItem="akw-6y-1mV" secondAttribute="leading" id="GL1-TV-4bd"/>
+                <constraint firstItem="bXa-wB-PrK" firstAttribute="width" secondItem="oVC-XJ-lNR" secondAttribute="width" id="HH1-kx-odI"/>
+                <constraint firstAttribute="bottom" secondItem="8zm-u2-Fa4" secondAttribute="bottom" id="Hhj-Nd-7Y8"/>
+                <constraint firstItem="JJz-5Y-9Lm" firstAttribute="height" secondItem="oVC-XJ-lNR" secondAttribute="height" id="K2G-OX-PqL"/>
+                <constraint firstItem="JJz-5Y-9Lm" firstAttribute="width" secondItem="oVC-XJ-lNR" secondAttribute="width" id="WHw-JK-5Cw"/>
+                <constraint firstItem="JJz-5Y-9Lm" firstAttribute="top" secondItem="bXa-wB-PrK" secondAttribute="top" id="a8A-kf-80U"/>
+                <constraint firstAttribute="trailing" secondItem="JJz-5Y-9Lm" secondAttribute="trailing" id="dAr-jZ-Bpf"/>
+                <constraint firstAttribute="bottom" secondItem="oVC-XJ-lNR" secondAttribute="bottom" constant="3.5" id="dNg-ud-LkG"/>
+                <constraint firstAttribute="trailing" secondItem="mge-F8-v8I" secondAttribute="trailing" id="eo3-gs-Lty"/>
+                <constraint firstItem="oVC-XJ-lNR" firstAttribute="leading" secondItem="akw-6y-1mV" secondAttribute="leading" id="k9P-wI-P9u"/>
+                <constraint firstItem="bXa-wB-PrK" firstAttribute="top" secondItem="oVC-XJ-lNR" secondAttribute="top" id="nYy-rZ-TmF"/>
+                <constraint firstItem="bXa-wB-PrK" firstAttribute="leading" secondItem="oVC-XJ-lNR" secondAttribute="trailing" id="rx7-mj-8lg"/>
+                <constraint firstItem="8zm-u2-Fa4" firstAttribute="leading" secondItem="akw-6y-1mV" secondAttribute="leading" constant="-0.5" id="sMd-Py-0C1"/>
+                <constraint firstItem="8zm-u2-Fa4" firstAttribute="width" secondItem="akw-6y-1mV" secondAttribute="width" multiplier="1:3" id="xYw-EY-hUA"/>
+                <constraint firstItem="oVC-XJ-lNR" firstAttribute="top" secondItem="akw-6y-1mV" secondAttribute="top" constant="3.5" id="xfQ-MB-Ffn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="firstBtn" destination="oVC-XJ-lNR" id="9Zw-Fi-nRz"/>
+                <outlet property="redLineView" destination="8zm-u2-Fa4" id="Qdy-vB-alX"/>
+                <outlet property="secondBtn" destination="bXa-wB-PrK" id="RRo-J7-cs1"/>
+                <outlet property="thirdBtn" destination="JJz-5Y-9Lm" id="So9-7c-7b9"/>
+            </connections>
+            <point key="canvasLocation" x="-46" y="-436"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HSGHFirstContentView">
+            <connections>
+                <outlet property="image" destination="pID-KD-0Xn" id="ICP-5p-lsy"/>
+                <outlet property="imageHeight" destination="tbM-4j-2Rh" id="sIK-2J-ClJ"/>
+                <outlet property="imageWidth" destination="r5N-0E-ZVE" id="xZN-BC-Bhp"/>
+                <outlet property="indicatorView" destination="uA3-2f-3UR" id="8Wj-cM-Bc4"/>
+                <outlet property="moreBtn" destination="TrW-6f-Jyc" id="M4i-IO-d3c"/>
+                <outlet property="moreHeight" destination="JJT-pb-pNG" id="wf4-yD-WsP"/>
+                <outlet property="textHeight" destination="iED-GS-FPY" id="Qnn-4y-zay"/>
+                <outlet property="textTopToImage" destination="jQi-B9-AVJ" id="Er3-UI-84u"/>
+                <outlet property="view" destination="iN0-l3-epB" id="vWc-xK-Pjx"/>
+                <outlet property="yylabelBg" destination="oU0-X9-LuV" id="gKF-gW-CMM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uA3-2f-3UR">
+                    <rect key="frame" x="178" y="140" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="4pS-LJ-Y2p"/>
+                        <constraint firstAttribute="height" constant="20" id="HSv-8M-Z8l"/>
+                    </constraints>
+                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oU0-X9-LuV">
+                    <rect key="frame" x="12" y="300" width="351" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="iED-GS-FPY"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrW-6f-Jyc">
+                    <rect key="frame" x="318" y="320" width="45" height="12"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="JJT-pb-pNG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <state key="normal" title="查看更多">
+                        <color key="titleColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="moreBtnClicked:" destination="-1" eventType="touchUpInside" id="Pm3-9w-D5y"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pID-KD-0Xn" customClass="VideoImagePlayView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="375" id="r5N-0E-ZVE"/>
+                        <constraint firstAttribute="height" constant="300" id="tbM-4j-2Rh"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oU0-X9-LuV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="0ib-QT-mzt"/>
+                <constraint firstItem="pID-KD-0Xn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DWM-em-yIC"/>
+                <constraint firstAttribute="trailing" secondItem="oU0-X9-LuV" secondAttribute="trailing" constant="12" id="FL9-Qx-gWk"/>
+                <constraint firstItem="uA3-2f-3UR" firstAttribute="centerX" secondItem="pID-KD-0Xn" secondAttribute="centerX" id="PD8-ru-tEO"/>
+                <constraint firstItem="uA3-2f-3UR" firstAttribute="centerY" secondItem="pID-KD-0Xn" secondAttribute="centerY" id="QQy-of-arZ"/>
+                <constraint firstItem="pID-KD-0Xn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RRW-Df-glD"/>
+                <constraint firstItem="TrW-6f-Jyc" firstAttribute="top" secondItem="oU0-X9-LuV" secondAttribute="bottom" id="b0d-ia-siM"/>
+                <constraint firstItem="TrW-6f-Jyc" firstAttribute="trailing" secondItem="oU0-X9-LuV" secondAttribute="trailing" id="ft0-9N-fgE"/>
+                <constraint firstItem="oU0-X9-LuV" firstAttribute="top" secondItem="pID-KD-0Xn" secondAttribute="bottom" id="jQi-B9-AVJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-14.5" y="-20"/>
+        </view>
+    </objects>
+</document>

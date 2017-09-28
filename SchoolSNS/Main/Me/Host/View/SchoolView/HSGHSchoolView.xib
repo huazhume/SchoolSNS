@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HSGHSchoolView">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="101"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6V-rV-ohV" userLabel="line">
+                    <rect key="frame" x="0.0" y="0.0" width="457" height="0.5"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="5qh-oG-Xuf"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zone_education" highlightedImage="zone_education" translatesAutoresizingMaskIntoConstraints="NO" id="qFk-do-BEm">
+                    <rect key="frame" x="12" y="17.5" width="19" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="rmi-qv-hBe"/>
+                        <constraint firstAttribute="width" constant="19" id="z7f-8y-HIx"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8O-ej-ORS" userLabel="SchoolContainsView">
+                    <rect key="frame" x="39" y="17" width="418" height="56"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zone_location" highlightedImage="zone_location" translatesAutoresizingMaskIntoConstraints="NO" id="LQp-vo-fgN">
+                    <rect key="frame" x="12" y="70" width="19" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="2RK-Oy-dhf"/>
+                        <constraint firstAttribute="width" constant="19" id="Hhq-UU-FLs"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6d-x9-Qv3">
+                    <rect key="frame" x="39" y="70.5" width="150" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="fsE-IX-lRg"/>
+                        <constraint firstAttribute="height" constant="18" id="kzF-Hq-gY2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="textColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tq-y5-zOL" userLabel="editSchoolInfoButton">
+                    <rect key="frame" x="415" y="7" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="a85-4i-fZU"/>
+                        <constraint firstAttribute="height" constant="44" id="fcn-l6-jyu"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    <state key="normal" title="Button" image="zone_school_add"/>
+                    <connections>
+                        <action selector="clickAddSchool:" destination="iN0-l3-epB" eventType="touchUpInside" id="L0r-rF-OAT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9G-z2-xbx">
+                    <rect key="frame" x="425" y="67" width="24" height="24"/>
+                    <state key="normal" image="modify_icon"/>
+                    <connections>
+                        <action selector="changeAddress:" destination="iN0-l3-epB" eventType="touchUpInside" id="OY4-3V-s7g"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LQp-vo-fgN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="44Q-sk-RmF"/>
+                <constraint firstAttribute="bottom" secondItem="E8O-ej-ORS" secondAttribute="bottom" constant="28" id="7gM-6d-1vt"/>
+                <constraint firstItem="V9G-z2-xbx" firstAttribute="centerX" secondItem="9tq-y5-zOL" secondAttribute="centerX" id="EB3-CV-fjX"/>
+                <constraint firstItem="V9G-z2-xbx" firstAttribute="centerY" secondItem="LQp-vo-fgN" secondAttribute="centerY" id="EbJ-sy-9J4"/>
+                <constraint firstItem="9tq-y5-zOL" firstAttribute="top" secondItem="E8O-ej-ORS" secondAttribute="top" constant="-10" id="JiL-AM-Pl2"/>
+                <constraint firstItem="qFk-do-BEm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="KUN-tD-NMY"/>
+                <constraint firstAttribute="trailing" secondItem="E8O-ej-ORS" secondAttribute="trailing" id="LbM-v6-ZFz"/>
+                <constraint firstAttribute="bottom" secondItem="LQp-vo-fgN" secondAttribute="bottom" constant="12" id="S7z-H5-4cs"/>
+                <constraint firstItem="E8O-ej-ORS" firstAttribute="leading" secondItem="qFk-do-BEm" secondAttribute="trailing" constant="8" id="TZ3-bI-xG0"/>
+                <constraint firstItem="v6V-rV-ohV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZsA-FK-kY9"/>
+                <constraint firstAttribute="trailing" secondItem="9tq-y5-zOL" secondAttribute="trailing" constant="-2" id="a4n-ui-ml6"/>
+                <constraint firstItem="v6V-rV-ohV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aHc-FH-bZa"/>
+                <constraint firstItem="E8O-ej-ORS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="icl-Wp-5wy"/>
+                <constraint firstItem="v6V-rV-ohV" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="jmW-wi-t9A"/>
+                <constraint firstItem="qFk-do-BEm" firstAttribute="top" secondItem="v6V-rV-ohV" secondAttribute="bottom" constant="17" id="nif-jc-rko"/>
+                <constraint firstItem="b6d-x9-Qv3" firstAttribute="leading" secondItem="LQp-vo-fgN" secondAttribute="trailing" constant="8" id="pTB-28-ztc"/>
+                <constraint firstItem="b6d-x9-Qv3" firstAttribute="centerY" secondItem="LQp-vo-fgN" secondAttribute="centerY" id="qhq-qx-uet"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="_cityLabelWidthCons" destination="fsE-IX-lRg" id="apx-Cv-c2T"/>
+                <outlet property="addButton" destination="9tq-y5-zOL" id="LPP-uG-bID"/>
+                <outlet property="changeCityBtn" destination="V9G-z2-xbx" id="tNQ-PV-6s3"/>
+                <outlet property="cityLabel" destination="b6d-x9-Qv3" id="cnW-ly-QsZ"/>
+                <outlet property="edcationIcon" destination="qFk-do-BEm" id="wuy-mz-wsG"/>
+                <outlet property="schoolContainsView" destination="E8O-ej-ORS" id="qQT-dk-rlq"/>
+            </connections>
+            <point key="canvasLocation" x="-333.5" y="-427.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="modify_icon" width="24" height="24"/>
+        <image name="zone_education" width="19" height="19"/>
+        <image name="zone_location" width="19" height="19"/>
+        <image name="zone_school_add" width="24" height="24"/>
+    </resources>
+</document>

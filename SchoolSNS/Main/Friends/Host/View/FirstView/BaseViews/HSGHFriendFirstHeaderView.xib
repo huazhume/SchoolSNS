@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="HSGHFriendFirstHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hz5-fu-izV">
+                    <rect key="frame" x="12" y="10" width="296" height="30"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_search" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-Nx-Wex">
+                            <rect key="frame" x="5" y="1.5" width="22" height="27.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27.5" id="gQQ-lg-hZs"/>
+                                <constraint firstAttribute="width" constant="22" id="rIi-ig-604"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="L0C-D5-nnP"/>
+                        <constraint firstItem="tFm-Nx-Wex" firstAttribute="leading" secondItem="Hz5-fu-izV" secondAttribute="leading" constant="5" id="gNr-9R-fSz"/>
+                        <constraint firstItem="tFm-Nx-Wex" firstAttribute="centerY" secondItem="Hz5-fu-izV" secondAttribute="centerY" id="pvu-GN-lc0"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaV-xf-XAo">
+                    <rect key="frame" x="272" y="10" width="40" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="SgE-jn-D8z"/>
+                        <constraint firstAttribute="height" constant="30" id="Xcz-JU-WrC"/>
+                    </constraints>
+                    <state key="normal" image="icon_gbss"/>
+                    <connections>
+                        <action selector="closeBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Wog-yS-vH2"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入TA的名字" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="9ww-GA-c2K" customClass="HSGHTextField">
+                    <rect key="frame" x="44" y="15" width="228" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="oXL-RJ-qoD"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="blR-uy-i1r"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9ww-GA-c2K" firstAttribute="leading" secondItem="tFm-Nx-Wex" secondAttribute="trailing" constant="5" id="0pO-aA-riq"/>
+                <constraint firstAttribute="trailing" secondItem="Hz5-fu-izV" secondAttribute="trailing" constant="12" id="1oa-vl-u9p"/>
+                <constraint firstItem="VaV-xf-XAo" firstAttribute="centerY" secondItem="Hz5-fu-izV" secondAttribute="centerY" id="GNr-Me-EpJ"/>
+                <constraint firstAttribute="trailing" secondItem="VaV-xf-XAo" secondAttribute="trailing" constant="8" id="L8r-ZI-lIW"/>
+                <constraint firstItem="Hz5-fu-izV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aAH-yl-KLN"/>
+                <constraint firstItem="9ww-GA-c2K" firstAttribute="centerY" secondItem="Hz5-fu-izV" secondAttribute="centerY" id="bAj-ap-6z3"/>
+                <constraint firstItem="9ww-GA-c2K" firstAttribute="trailing" secondItem="VaV-xf-XAo" secondAttribute="leading" id="f2c-jv-ZRG"/>
+                <constraint firstItem="Hz5-fu-izV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="k1i-8E-LFk"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="closeBtn" destination="VaV-xf-XAo" id="rv5-jR-uaw"/>
+                <outlet property="searchTF" destination="9ww-GA-c2K" id="LKb-pt-LYZ"/>
+            </connections>
+            <point key="canvasLocation" x="-135" y="-109"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_gbss" width="23" height="23"/>
+        <image name="icon_search" width="22" height="27"/>
+    </resources>
+</document>

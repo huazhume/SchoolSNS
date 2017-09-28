@@ -1,0 +1,27 @@
+//
+//  Use this file to import your target's public headers that you would like to expose to Swift.
+//
+
+#import "HSGHBaseNavigationViewController.h"
+#import "HSGHBaseViewController.h"
+#import "HSGHBaseTableViewController.h"
+#import "AppDelegate.h"
+#import "HSGHLocationManager.h"
+#import "UIViewAdditions.h"
+#import "Masonry.h"
+#import "HSGHTools.h"
+#import "HSGHServerInterfaceUrl.h"
+#import "HSGHPhotoPickerController.h"
+#import "HSGHRegisterNetRequest.h"
+#import "HSGHUploadPicNetRequest.h"
+#import "HSGHUserInf.h"
+#import "HSGHLoginNetRequest.h"
+#import "SVProgressHUD.h"
+#import "PopoverView.h"
+#import "HSGHSettingsModel.h"
+#import "UILabel+UILabel_VerticalAlign.h"
+#import "FXBlurView.h"
+#import "HSGHUserInf.h"
+#import "UIImageView+WebCache.h"
+#import "HSGHHomeBaseViewController.h"
+#import "HSGHNameMatch.h"

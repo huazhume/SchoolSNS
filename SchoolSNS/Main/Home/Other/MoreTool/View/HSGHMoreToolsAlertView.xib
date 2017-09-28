@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HSGHMoreToolsAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kna-mz-KUa">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaC-Lt-LL7">
+                    <rect key="frame" x="0.0" y="417" width="375" height="250"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzs-Ci-MxE">
+                            <rect key="frame" x="0.0" y="200" width="375" height="50"/>
+                            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="kaj-kj-WC1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.27058823529411763" green="0.50980392156862742" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="1b1-Mc-Ruj"/>
+                            </connections>
+                        </button>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4fG-ua-50S">
+                            <rect key="frame" x="0.0" y="15" width="375" height="185"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M89-Ko-aek">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4fG-ua-50S" secondAttribute="trailing" id="2tf-Qo-dOY"/>
+                        <constraint firstAttribute="bottom" secondItem="hzs-Ci-MxE" secondAttribute="bottom" id="653-Aj-oMh"/>
+                        <constraint firstAttribute="height" constant="250" id="KEc-Gi-Oeg"/>
+                        <constraint firstItem="4fG-ua-50S" firstAttribute="leading" secondItem="vaC-Lt-LL7" secondAttribute="leading" id="MW3-4N-2mR"/>
+                        <constraint firstAttribute="trailing" secondItem="hzs-Ci-MxE" secondAttribute="trailing" id="N1p-3U-SRc"/>
+                        <constraint firstItem="hzs-Ci-MxE" firstAttribute="leading" secondItem="vaC-Lt-LL7" secondAttribute="leading" id="iew-uC-Z6t"/>
+                        <constraint firstItem="hzs-Ci-MxE" firstAttribute="top" secondItem="4fG-ua-50S" secondAttribute="bottom" id="oCC-Bs-EHe"/>
+                        <constraint firstItem="4fG-ua-50S" firstAttribute="top" secondItem="vaC-Lt-LL7" secondAttribute="top" constant="15" id="wAV-fo-k5l"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kna-mz-KUa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5jg-Q0-m6H"/>
+                <constraint firstItem="vaC-Lt-LL7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WgQ-aH-72Y"/>
+                <constraint firstAttribute="trailing" secondItem="vaC-Lt-LL7" secondAttribute="trailing" id="m2V-dq-UHz"/>
+                <constraint firstAttribute="trailing" secondItem="kna-mz-KUa" secondAttribute="trailing" id="nq2-S7-Wrz"/>
+                <constraint firstAttribute="bottom" secondItem="kna-mz-KUa" secondAttribute="bottom" id="q63-67-N2Q"/>
+                <constraint firstAttribute="bottom" secondItem="vaC-Lt-LL7" secondAttribute="bottom" id="qzT-cN-PmT"/>
+                <constraint firstItem="kna-mz-KUa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rzG-tG-Ntq"/>
+            </constraints>
+            <connections>
+                <outlet property="bgView" destination="kna-mz-KUa" id="1eq-gd-WDd"/>
+                <outlet property="collectionView" destination="4fG-ua-50S" id="s0G-kt-yNO"/>
+                <outlet property="toolView" destination="vaC-Lt-LL7" id="Zey-Yn-gw0"/>
+            </connections>
+        </view>
+    </objects>
+</document>

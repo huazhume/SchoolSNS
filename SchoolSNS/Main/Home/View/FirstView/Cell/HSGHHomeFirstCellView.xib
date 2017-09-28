@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HSGHHomeFirstCellView">
+            <connections>
+                <outlet property="CommentView" destination="6Ni-Gn-jzB" id="gI4-jr-Kh4"/>
+                <outlet property="ContentView" destination="rgj-nr-pxH" id="gto-Ya-xzB"/>
+                <outlet property="ToolView" destination="Rjy-XB-4ui" id="Pfy-xN-PvX"/>
+                <outlet property="commentHeight" destination="QsJ-by-rzq" id="Ar8-PW-c9I"/>
+                <outlet property="contentHeight" destination="fa0-fy-0je" id="NRL-mV-Alx"/>
+                <outlet property="forwardView" destination="T1i-IO-Laf" id="sTL-Ch-qw7"/>
+                <outlet property="forwordViewHeight" destination="ZMs-qV-kuP" id="Ap2-0M-jS7"/>
+                <outlet property="marginTop" destination="Pso-8M-Ttv" id="tiW-Xb-B91"/>
+                <outlet property="toolsHeight" destination="vKi-3L-TXy" id="4dF-kf-qU3"/>
+                <outlet property="view" destination="iN0-l3-epB" id="eB6-f7-w1m"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1i-IO-Laf" customClass="HSGHForwardView">
+                    <rect key="frame" x="0.0" y="240" width="375" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="ZMs-qV-kuP"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-nr-pxH" customClass="HSGHFirstContentView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="fa0-fy-0je"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjy-XB-4ui" customClass="HSGHMeToolView">
+                    <rect key="frame" x="0.0" y="340" width="375" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="vKi-3L-TXy"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ni-Gn-jzB" customClass="HSGHFirstCommentView">
+                    <rect key="frame" x="0.0" y="400" width="375" height="51.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51.5" id="QsJ-by-rzq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Rjy-XB-4ui" firstAttribute="top" secondItem="T1i-IO-Laf" secondAttribute="bottom" id="5eI-5L-Uy2"/>
+                <constraint firstAttribute="trailing" secondItem="rgj-nr-pxH" secondAttribute="trailing" id="9c6-Si-pr9"/>
+                <constraint firstItem="6Ni-Gn-jzB" firstAttribute="leading" secondItem="Rjy-XB-4ui" secondAttribute="leading" id="C7E-sb-3JH"/>
+                <constraint firstItem="T1i-IO-Laf" firstAttribute="trailing" secondItem="rgj-nr-pxH" secondAttribute="trailing" id="JAr-Mh-v9S"/>
+                <constraint firstItem="Rjy-XB-4ui" firstAttribute="leading" secondItem="rgj-nr-pxH" secondAttribute="leading" id="LS7-FK-Gse"/>
+                <constraint firstItem="Rjy-XB-4ui" firstAttribute="trailing" secondItem="rgj-nr-pxH" secondAttribute="trailing" id="Lmy-B7-yZx"/>
+                <constraint firstItem="T1i-IO-Laf" firstAttribute="top" secondItem="rgj-nr-pxH" secondAttribute="bottom" id="LoZ-5y-Amd"/>
+                <constraint firstItem="rgj-nr-pxH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Pso-8M-Ttv"/>
+                <constraint firstItem="6Ni-Gn-jzB" firstAttribute="top" secondItem="Rjy-XB-4ui" secondAttribute="bottom" id="ivq-cR-90G"/>
+                <constraint firstItem="T1i-IO-Laf" firstAttribute="leading" secondItem="rgj-nr-pxH" secondAttribute="leading" id="nln-V5-z1K"/>
+                <constraint firstItem="6Ni-Gn-jzB" firstAttribute="trailing" secondItem="Rjy-XB-4ui" secondAttribute="trailing" id="yyc-ZW-Pex"/>
+                <constraint firstItem="rgj-nr-pxH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="z5j-rg-JRh"/>
+            </constraints>
+            <point key="canvasLocation" x="348" y="-607"/>
+        </view>
+    </objects>
+</document>

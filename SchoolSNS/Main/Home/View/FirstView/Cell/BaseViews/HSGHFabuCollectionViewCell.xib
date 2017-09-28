@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HSGHFabuCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrL-9Z-Iiv">
+                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCX-aP-65K" customClass="AnimatableButton" customModule="SchoolSNS" customModuleProvider="target">
+                        <rect key="frame" x="2" y="2" width="26" height="26"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal">
+                            <color key="titleColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="13"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZrL-9Z-Iiv" secondAttribute="trailing" id="3Sl-mU-wZX"/>
+                <constraint firstItem="ZrL-9Z-Iiv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="J4P-Ir-Rk2"/>
+                <constraint firstAttribute="bottom" secondItem="ZrL-9Z-Iiv" secondAttribute="bottom" id="P69-H7-oPH"/>
+                <constraint firstItem="ZrL-9Z-Iiv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="R8o-8L-6aw"/>
+                <constraint firstItem="WCX-aP-65K" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="SRG-mX-c5i"/>
+                <constraint firstAttribute="trailing" secondItem="ZrL-9Z-Iiv" secondAttribute="trailing" id="Tfc-YC-J6I"/>
+                <constraint firstAttribute="trailing" secondItem="WCX-aP-65K" secondAttribute="trailing" constant="2" id="lVh-94-ZKi"/>
+                <constraint firstAttribute="bottom" secondItem="WCX-aP-65K" secondAttribute="bottom" constant="2" id="mcb-K5-b6Y"/>
+                <constraint firstItem="WCX-aP-65K" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="tIY-jS-WMy"/>
+            </constraints>
+            <connections>
+                <outlet property="userBack" destination="ZrL-9Z-Iiv" id="F1v-4N-aPK"/>
+                <outlet property="userIcon" destination="WCX-aP-65K" id="JAH-3l-VKY"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HSGHBootScreenViewController" customModule="SchoolSNS" customModuleProvider="target">
+            <connections>
+                <outlet property="pageControl" destination="j26-9X-5eO" id="PDh-E9-iEE"/>
+                <outlet property="scrollView" destination="kth-1t-UUw" id="oBc-jw-L1U"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kth-1t-UUw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8F-MN-ROm">
+                            <rect key="frame" x="0.0" y="0.0" width="1125" height="666"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHe-GN-jt8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
+                                    <color key="backgroundColor" red="0.68740504150000004" green="0.35778510629999999" blue="0.950067997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctN-P4-tPZ">
+                                    <rect key="frame" x="375" y="0.0" width="375" height="666"/>
+                                    <color key="backgroundColor" red="0.51052549775565526" green="1" blue="0.68729546778387496" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s43-fD-1rw">
+                                    <rect key="frame" x="750" y="0.0" width="375" height="666"/>
+                                    <color key="backgroundColor" red="0.27058823529999998" green="0.50980392159999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="IHe-GN-jt8" firstAttribute="top" secondItem="y8F-MN-ROm" secondAttribute="top" id="1uU-OL-HlO"/>
+                                <constraint firstItem="s43-fD-1rw" firstAttribute="width" secondItem="ctN-P4-tPZ" secondAttribute="width" id="B0W-rX-dYV"/>
+                                <constraint firstItem="s43-fD-1rw" firstAttribute="top" secondItem="ctN-P4-tPZ" secondAttribute="top" id="SG6-YV-DO7"/>
+                                <constraint firstItem="ctN-P4-tPZ" firstAttribute="top" secondItem="IHe-GN-jt8" secondAttribute="top" id="SQW-Je-WqP"/>
+                                <constraint firstItem="ctN-P4-tPZ" firstAttribute="width" secondItem="IHe-GN-jt8" secondAttribute="width" id="VUn-yx-0wN"/>
+                                <constraint firstItem="s43-fD-1rw" firstAttribute="bottom" secondItem="ctN-P4-tPZ" secondAttribute="bottom" id="VYx-BJ-f1r"/>
+                                <constraint firstItem="ctN-P4-tPZ" firstAttribute="leading" secondItem="IHe-GN-jt8" secondAttribute="trailing" id="Whz-Bi-VKh"/>
+                                <constraint firstItem="s43-fD-1rw" firstAttribute="leading" secondItem="ctN-P4-tPZ" secondAttribute="trailing" id="Xhf-Yg-BiR"/>
+                                <constraint firstItem="IHe-GN-jt8" firstAttribute="leading" secondItem="y8F-MN-ROm" secondAttribute="leading" id="l2v-iy-Rwi"/>
+                                <constraint firstAttribute="bottom" secondItem="IHe-GN-jt8" secondAttribute="bottom" id="rgZ-Ip-4cT"/>
+                                <constraint firstItem="ctN-P4-tPZ" firstAttribute="bottom" secondItem="IHe-GN-jt8" secondAttribute="bottom" id="sor-sY-iM7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="y8F-MN-ROm" secondAttribute="bottom" id="0hk-cT-q3R"/>
+                        <constraint firstItem="y8F-MN-ROm" firstAttribute="top" secondItem="kth-1t-UUw" secondAttribute="top" id="0iI-WL-NH0"/>
+                        <constraint firstItem="y8F-MN-ROm" firstAttribute="leading" secondItem="kth-1t-UUw" secondAttribute="leading" id="8Ce-Ls-8zf"/>
+                        <constraint firstItem="y8F-MN-ROm" firstAttribute="centerY" secondItem="kth-1t-UUw" secondAttribute="centerY" id="DSC-m6-z4q"/>
+                        <constraint firstAttribute="trailing" secondItem="y8F-MN-ROm" secondAttribute="trailing" id="fBE-C8-qQz"/>
+                    </constraints>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="j26-9X-5eO">
+                    <rect key="frame" x="137.5" y="550" width="100" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="S1L-jz-zH8"/>
+                        <constraint firstAttribute="width" constant="100" id="haC-gM-VTY"/>
+                    </constraints>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="kth-1t-UUw" secondAttribute="bottom" id="1GV-GT-tkh"/>
+                <constraint firstItem="y8F-MN-ROm" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="3" id="2Wl-FL-PEw"/>
+                <constraint firstItem="IHe-GN-jt8" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="3TZ-Q7-NMD"/>
+                <constraint firstItem="kth-1t-UUw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DE4-eO-Icf"/>
+                <constraint firstItem="kth-1t-UUw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PIW-g5-dgm"/>
+                <constraint firstAttribute="trailing" secondItem="kth-1t-UUw" secondAttribute="trailing" id="Tcb-ow-2An"/>
+                <constraint firstItem="j26-9X-5eO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eNR-Oo-GT5"/>
+                <constraint firstAttribute="bottom" secondItem="j26-9X-5eO" secondAttribute="bottom" constant="80" id="zN2-Ub-o18"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

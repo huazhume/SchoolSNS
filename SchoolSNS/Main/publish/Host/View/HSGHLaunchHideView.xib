@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HSGHLaunchHideView">
+            <rect key="frame" x="0.0" y="0.0" width="69" height="25"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yh9-6x-ZY2">
+                    <rect key="frame" x="0.0" y="0.0" width="69" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <state key="normal" title="显示英文名" backgroundImage="tshmk">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="hideBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="aJt-fV-yTW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yh9-6x-ZY2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="K0v-Kp-jO8"/>
+                <constraint firstAttribute="bottom" secondItem="yh9-6x-ZY2" secondAttribute="bottom" id="Y3W-az-gWA"/>
+                <constraint firstItem="yh9-6x-ZY2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ydg-P1-VTc"/>
+                <constraint firstAttribute="trailing" secondItem="yh9-6x-ZY2" secondAttribute="trailing" id="oIN-dp-ciO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="52" y="42"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tshmk" width="69" height="25"/>
+    </resources>
+</document>

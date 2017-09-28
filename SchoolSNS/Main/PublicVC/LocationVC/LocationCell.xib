@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LocationCell" customModule="SchoolSNS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="704" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="XSp-cA-4hN">
+                    <rect key="frame" x="12" y="8" width="667" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="MSz-jS-QIe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwt-qa-ZBf" userLabel="line">
+                    <rect key="frame" x="12" y="48.5" width="692" height="0.5"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="sRx-VQ-btd"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quG-8U-vQd">
+                    <rect key="frame" x="12" y="30" width="667" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="dyr-Mv-dJ4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.70980392156862748" green="0.71372549019607845" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjQ-tX-Lba" customClass="AnimatableButton" customModule="SchoolSNS" customModuleProvider="target">
+                    <rect key="frame" x="680" y="16.5" width="17" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="wyx-MS-x7M"/>
+                        <constraint firstAttribute="width" constant="17" id="zfc-fN-kZq"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="checked"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="quG-8U-vQd" firstAttribute="top" secondItem="XSp-cA-4hN" secondAttribute="bottom" constant="2" id="41w-Uv-yOu"/>
+                <constraint firstAttribute="trailing" secondItem="quG-8U-vQd" secondAttribute="trailing" constant="25" id="SHf-1T-zpn"/>
+                <constraint firstAttribute="trailing" secondItem="XSp-cA-4hN" secondAttribute="trailing" constant="25" id="YqF-qb-Nck"/>
+                <constraint firstAttribute="bottom" secondItem="iwt-qa-ZBf" secondAttribute="bottom" constant="1" id="ZnF-cq-rur"/>
+                <constraint firstItem="HjQ-tX-Lba" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="av4-Dh-NHY"/>
+                <constraint firstAttribute="trailing" secondItem="iwt-qa-ZBf" secondAttribute="trailing" id="eEg-lh-zwm"/>
+                <constraint firstItem="XSp-cA-4hN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="fRw-a8-Vn9"/>
+                <constraint firstItem="quG-8U-vQd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="kDJ-B6-iVe"/>
+                <constraint firstItem="XSp-cA-4hN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="kz2-Zj-PCO"/>
+                <constraint firstAttribute="trailing" secondItem="HjQ-tX-Lba" secondAttribute="trailing" constant="7" id="sXF-0F-NO8"/>
+                <constraint firstItem="iwt-qa-ZBf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="xYj-wE-YvU"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="checkedButton" destination="HjQ-tX-Lba" id="Xwj-rp-gcb"/>
+                <outlet property="firstLicationHeight" destination="MSz-jS-QIe" id="c6E-br-UWX"/>
+                <outlet property="firstLocationName" destination="XSp-cA-4hN" id="PuG-f0-qoP"/>
+                <outlet property="secondLocationName" destination="quG-8U-vQd" id="6Yv-9p-dU7"/>
+            </connections>
+            <point key="canvasLocation" x="-120" y="-233.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checked" width="17" height="17"/>
+    </resources>
+</document>

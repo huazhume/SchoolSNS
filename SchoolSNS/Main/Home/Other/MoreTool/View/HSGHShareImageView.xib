@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HSGHShareImageView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fxs" translatesAutoresizingMaskIntoConstraints="NO" id="2Us-sc-r7O">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="95" id="vh5-gR-ULa"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Zt-qV-siW">
+                    <rect key="frame" x="0.0" y="95" width="375" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="jig-Sc-kAr"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fxx" translatesAutoresizingMaskIntoConstraints="NO" id="0fC-Hd-Xve">
+                    <rect key="frame" x="0.0" y="195" width="375" height="255"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="255" id="aWO-Kz-Ry2"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9Zt-qV-siW" firstAttribute="top" secondItem="2Us-sc-r7O" secondAttribute="bottom" id="5Of-mI-xx5"/>
+                <constraint firstItem="2Us-sc-r7O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6jX-SQ-7g6"/>
+                <constraint firstItem="0fC-Hd-Xve" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9xh-mF-ZVp"/>
+                <constraint firstAttribute="trailing" secondItem="2Us-sc-r7O" secondAttribute="trailing" id="DfT-Gw-WFw"/>
+                <constraint firstAttribute="trailing" secondItem="9Zt-qV-siW" secondAttribute="trailing" id="Ini-ai-WgS"/>
+                <constraint firstItem="0fC-Hd-Xve" firstAttribute="top" secondItem="9Zt-qV-siW" secondAttribute="bottom" id="XGs-d9-PvR"/>
+                <constraint firstAttribute="trailing" secondItem="0fC-Hd-Xve" secondAttribute="trailing" id="aWT-I3-4IC"/>
+                <constraint firstItem="9Zt-qV-siW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="e3H-Gy-lA9"/>
+                <constraint firstItem="2Us-sc-r7O" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yUs-RD-1EL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="fistHeight" destination="vh5-gR-ULa" id="WUT-o6-utD"/>
+                <outlet property="imageBgView" destination="9Zt-qV-siW" id="csz-OB-LV0"/>
+                <outlet property="imageHeight" destination="jig-Sc-kAr" id="mkg-Wn-hRF"/>
+                <outlet property="thirdHeight" destination="aWO-Kz-Ry2" id="DnI-RG-zUN"/>
+            </connections>
+            <point key="canvasLocation" x="52.5" y="-126"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fxs" width="375" height="95"/>
+        <image name="fxx" width="375" height="254"/>
+    </resources>
+</document>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HSGHZoneCell">
+            <rect key="frame" x="0.0" y="0.0" width="507" height="146"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMF-GU-hxM">
+                    <rect key="frame" x="12" y="0.0" width="34" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="SkQ-qA-JRz"/>
+                        <constraint firstAttribute="width" constant="34" id="acj-VH-dlv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <color key="textColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3月" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGG-w2-Ufm">
+                    <rect key="frame" x="12" y="20" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="miA-ah-V66" userLabel="line">
+                    <rect key="frame" x="50" y="0.0" width="1" height="146"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="02M-dk-sG9"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zone_circle_red" highlightedImage="zone_circle_red" translatesAutoresizingMaskIntoConstraints="NO" id="KFR-7U-18p">
+                    <rect key="frame" x="45.5" y="4" width="10" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="3nE-Br-rOB"/>
+                        <constraint firstAttribute="height" constant="10" id="CTS-Uk-0PV"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbR-FF-0Zn" customClass="HSGHHomeFirstCellView">
+                    <rect key="frame" x="0.0" y="0.0" width="507" height="145"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjb-On-8iD">
+                    <rect key="frame" x="0.0" y="145" width="507" height="1"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="eAW-Zv-nVc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="BbR-FF-0Zn" secondAttribute="trailing" id="74W-5d-nOQ"/>
+                <constraint firstItem="miA-ah-V66" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CGf-Vz-Wy0"/>
+                <constraint firstAttribute="bottom" secondItem="miA-ah-V66" secondAttribute="bottom" id="FD9-Hw-av6"/>
+                <constraint firstAttribute="trailing" secondItem="Bjb-On-8iD" secondAttribute="trailing" id="Hzd-3Q-Tw7"/>
+                <constraint firstItem="KFR-7U-18p" firstAttribute="centerY" secondItem="zMF-GU-hxM" secondAttribute="centerY" id="KJK-ME-Q96"/>
+                <constraint firstItem="zMF-GU-hxM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OS8-v8-h0S"/>
+                <constraint firstItem="Bjb-On-8iD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Rjk-2C-KaW"/>
+                <constraint firstAttribute="bottom" secondItem="BbR-FF-0Zn" secondAttribute="bottom" constant="1" id="dVE-zy-0qT"/>
+                <constraint firstItem="KFR-7U-18p" firstAttribute="centerX" secondItem="miA-ah-V66" secondAttribute="centerX" id="gEu-NH-lpf"/>
+                <constraint firstItem="miA-ah-V66" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="l6u-AE-ZPh"/>
+                <constraint firstItem="BbR-FF-0Zn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lVE-qq-Xeo"/>
+                <constraint firstAttribute="bottom" secondItem="Bjb-On-8iD" secondAttribute="bottom" id="nhz-e5-yG8"/>
+                <constraint firstItem="zMF-GU-hxM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="orX-Au-n2h"/>
+                <constraint firstItem="BbR-FF-0Zn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qjh-1H-flQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dayLabel" destination="zMF-GU-hxM" id="h67-Nu-X81"/>
+                <outlet property="markImageView" destination="KFR-7U-18p" id="hgs-58-Ldx"/>
+                <outlet property="monthLabel" destination="TGG-w2-Ufm" id="fWv-zR-phb"/>
+                <outlet property="publicCellView" destination="BbR-FF-0Zn" id="cbh-NP-MEW"/>
+            </connections>
+            <point key="canvasLocation" x="-74.5" y="59"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="zone_circle_red" width="10" height="10"/>
+    </resources>
+</document>

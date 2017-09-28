@@ -1,0 +1,232 @@
+//
+//  PrefixHeader.pch
+//  HSGHSNS
+//
+//  Created by Qianqian li on 2017/3/6.
+//  Copyright © 2017年 Qianqian li. All rights reserved.
+//
+
+#ifdef __OBJC__
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "SDWebImageManager.h"
+#import "UIView+Frame.h"
+#import "Masonry.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+//#import "NSString+YYAdd.h"
+//#import "HSGHUserInfoModel.h"
+#import "UIViewAdditions.h"
+#import "HSGHServerInterfaceUrl.h"
+#import "SVProgressHUD.h"
+#import "MJRefresh.h"
+#import "UILabel+FitLines.h"
+#import "NSString+Size.h"
+
+///weakSelf
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+typedef NS_ENUM(NSUInteger, HSContentType) {
+    HSContentText = 0,
+    HSContentImage,
+    HSContentImageAndText,
+    HSContentForward,
+    HSContentUnkonwn
+};
+
+///服务器请求状态码
+
+typedef NS_ENUM(NSInteger, HSStatusCode) {
+    //服务器返回的错误码
+            HSSuccess = 1000,    // 成功
+    HSShowMsg = 1001,    // 打印服务器信息
+    HSReconnect = 1002,    // 重新请求（连接）
+    HSRelogin = 1003,    // 重新登陆
+    HSSessionOver = 1004,    // 当前会话结束
+
+    //自定义客户端错误码
+            HSParamsError = 20000,   // 参数错误
+    HSChangyanLoginError,                 // 登录错误
+    HSNetLinkError,               // 网络链接错误
+    HSOtherError,                 // 其他错误
+
+};
+
+///Strings
+
+static NSString *const kStringLoging = @"登录中，请稍后";
+static NSString *const kStringNoData = @"暂时没有数据";
+static NSString *const kStringNetError = @"数据加载失败";
+static NSString *const kStringLoading = @"努力加载中...";
+static NSString *const kStringTokenExpire = @"登录超时，请重新登录";
+static NSString *const kStringNetRetry = @"网络异常，请稍后重试";
+static NSString *const kStringUserInoLocal = @"kStringUserInoLocal";
+static NSString *const KSamllProfession = @"KSamllProfession";
+
+
+///UIKIT Frames
+
+
+#define HSGHSCREEN_BOUNDS [UIScreen mainScreen].bounds
+#define HSLFontSize(size)       ([UIFont systemFontOfSize:size])
+#define HSLBoldFontSize(size)   ([UIFont boldSystemFontOfSize:size])
+
+#define HSGH_SCREEN_HEIGHT      [UIScreen mainScreen].bounds.size.height
+#define HSGH_SCREEN_WIDTH     [UIScreen mainScreen].bounds.size.width
+
+#define HSGH_TABBAR_HEIGHT 49
+//竖屏
+#define HSLFullScreenWidth     [UIScreen mainScreen].bounds.size.width
+#define HSLFullScreenHeight     [UIScreen mainScreen].bounds.size.height
+//一像素
+#define onePixel 1/[UIScreen mainScreen].scale
+
+#define HSLStatusBarHeight      20
+#define HSLNavBarHeight         64
+#define HSLTabBarHeight         49
+#define HSLChannelsHeight       38
+
+
+///机型适配
+
+#define  SYSTEM_VERSION  [[[UIDevice currentDevice] systemVersion] floatValue]
+#define  IOS7_Later      ([[[UIDevice currentDevice] systemVersion]floatValue] >= 7.0)
+#define  IOS8_Later      ([[[UIDevice currentDevice] systemVersion]floatValue] >= 8.0)
+#define  IOS9_Later      ([[[UIDevice currentDevice] systemVersion]floatValue] >= 9.0)
+#define  IOS10_Later      ([[[UIDevice currentDevice] systemVersion]floatValue] >= 10.0)
+#define  IOS11_Later      ([[[UIDevice currentDevice] systemVersion]floatValue] >= 11.0)
+
+#define isIPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isIPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isIPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isIPhone6P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+///颜色转化
+
+//十进制
+#define RGBCOLOR(r, g, b)         [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define RGBACOLOR(r, g, b, a)      [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+//十六进制（0xFFFFFF）
+#define HEXRGBCOLOR(hex)    [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:1.0]
+#define HEXRGBACOLOR(hex, a)        [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:a]
+#define HSRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1]
+
+#define UN_NIL_STR(s)            ((s==nil || [s isKindOfClass:[NSNull class]]||[@"" isEqualToString:s]) ?  @"" : s)
+
+///应用密匙信息
+
+//默认地址
+#define KRequestAddressURL         @"http://192.168.0.123:7070"
+//图片上传的地址
+//#define KRequestPicQiNiuURL         @"http://olnvr9zdc.bkt.clouddn.com"
+//图片上传的空间名
+//#define KRequestDirectoryQiNiuURL @"hsghpicroom"
+//#define KQiNiuSecretKey         @"RHriumrGe1thlRN0a8QjlZ-XC936qafSXYNxb9p3"
+//#define KQiNiuAcessKey         @"qmT7k2UOPPEjvFbKgy15exOZ5LjzTlCt9veJYWct"
+//环信注册的appkey
+//#define IMSDKappkey         @"zky8z2z3y3#huanxingdeshijie"
+//umeng的appkey
+#define MobSDKappkey         @"58e3b961cae7e76550001d83"
+//腾讯地图的appkey
+//#define TencentMapKey         @"IGPBZ-M463S-FR5OZ-6XLTS-OYX3T-G6FB3"
+//Amap
+//const static NSString *AmapAPIKey = @"5d2f7a2d88bc9d84b7ce79c4a7653686";
+//const static NSString *allPOISearchTypes = @"汽车服务|汽车销售|汽车维修|摩托车服务|餐饮服务|购物服务|生活服务|体育休闲服务|医疗保健服务|住宿服务|风景名胜|商务住宅|政府机构及社会团体|科教文化服务|交通设施服务|金融保险服务|公司企业|道路附属设施|地名地址信息|公共设施";
+#define LOCATION_UNKNOWE_ADDRESS @"未知位置"
+#define LOCATION_UNKNOWE_NAME @"未知位置"
+
+
+#define LOCATION_EMPTY_ADDRESS @"[位置]"
+#define LOCATION_EMPTY_NAME @"[位置]"
+
+#define LOCATION_ERROR_ADDRESS @"[获取地理名称出错]"
+
+
+
+
+///打印信息
+#ifndef __OPTIMIZE__
+#    define NSLog(...) NSLog(@"%@ \n\n", [NSString stringWithFormat:__VA_ARGS__])
+#else
+#    define NSLog(...)
+#endif
+
+#ifdef DEBUG
+#define HSLog(...) NSLog(__VA_ARGS__)
+#define HSLogFunc NSLog(@"%s",__func__)
+#else
+#define HSLog(...) 
+#endif
+
+
+///用户资源文件目录文件夹名
+
+#define IMAGE_DIR_NAME @"HSGH_IMAGE"
+#define VEDIO_DIR_NAME @"HSGH_VIDEO"
+#define AUDIO_DIR_NAME @"HSGH_AUDIO"
+#define OTHER_DIR_NAME @"HSGH_OTHER"
+#define DB_DIR_NAME @"HSGH_DB"
+
+
+/// tabbar
+
+#define HSGH_TABBAR_IMAGE @"s_tab_icon_center"
+
+
+// Public font
+#define HSGH_SMALL_FONT   [UIFont systemFontOfSize:12.f]
+#define HSGH_NORMAL_FONT  [UIFont systemFontOfSize:15.f]
+#define HSGH_BIG_FONT     [UIFont systemFontOfSize:17.f]
+
+
+
+//HSGHHome_Publish
+#define HSGH_PUBLISH_NOTIFICATION @"HSGHHOME_PUBLISH_NOTIFICATION"
+
+#define HSGH_PUBLISH_MESSAGE @"HSGHHOME_PUBLISH_MESSAGE"
+
+//HSGHFriend FRIEND_RELATIVE_MODE;
+
+#define FRIEND_NONE_IMAGE @"friend_none" //没有添加好友的状态
+#define FRIEND_TO_IMAGE  @"friend_to" //添加对方 对方未同意
+#define FRIEND_FROM_IMAGE @"friend_from"//对方添加你 你未同意
+#define FRIEND_ALL_IMAGE @"friend_all" // 互相为好友
+
+
+#define HSGH_PAGE_SIZE    20
+#define HSGH_NAVGATION_HEIGHT (33 + 20)
+
+#define HSGH_REPLAY_LINEHEIGHT 18//评论回复的行高
+#define HSGH_REPLAY_LINESPACE 0//评论回复之间的空隙
+
+#define HSGH_PUBLISH_MSG_NOTIFI          @"PUBLISH_MSG_NOTIFI"
+#define HSGH_POST_2_FRIEND_ADDME_NOTIFI  @"HSGH_POST_2_FRIEND_ADDME_NOTIFI"//通知--好友，加我--界面更新数据
+#define HSGH_POST_2_HOME_FIRST_NOTIFI  @"HSGH_POST_2_HOME_FIRST_NOTIFI"//发布新鲜事成功，首页--好友更新数据
+
+
+#define OPEN_VIDEO   //打开VIDEO功能
+#define kMaxVideoTime 10 //最长10s
+#define kMinVideoTime 3 //最短1s
+
+
+
+#define kFit(x) (kScreenWidth*((x)/kIphone6Width))
+// 苹果6的高度
+#define kIphone6Height 667.0
+// 苹果6的宽度
+#define kIphone6Width 375.0
+//屏幕的宽度
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+//屏幕的高度
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
+#endif /* PrefixHeader_pch */
+#endif

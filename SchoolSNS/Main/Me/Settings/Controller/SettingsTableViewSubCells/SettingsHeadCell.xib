@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17A291j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HSGHSettingsHeadCell" customModule="SchoolSNS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p75-qi-ONX">
+                    <rect key="frame" x="12" y="16.5" width="17" height="17"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="BOq-Sn-S0t"/>
+                        <constraint firstAttribute="width" constant="17" id="OSU-9a-vHK"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diR-QJ-mxh">
+                    <rect key="frame" x="34" y="14.5" width="60" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="EaA-nQ-7iY"/>
+                        <constraint firstAttribute="width" constant="60" id="Va9-tO-7PK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="s8d-at-hvY">
+                    <rect key="frame" x="364" y="16.5" width="17" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="17" id="5mW-bK-Dgb"/>
+                        <constraint firstAttribute="height" constant="17" id="crz-Yy-8E6"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="diR-QJ-mxh" firstAttribute="leading" secondItem="p75-qi-ONX" secondAttribute="trailing" constant="5" id="4QV-NI-Myf"/>
+                <constraint firstItem="diR-QJ-mxh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5Ke-TN-Nqr"/>
+                <constraint firstItem="p75-qi-ONX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ans-Ag-ME8"/>
+                <constraint firstItem="s8d-at-hvY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GZR-GF-dRf"/>
+                <constraint firstAttribute="trailing" secondItem="s8d-at-hvY" secondAttribute="trailing" constant="20" id="LLs-6l-8GR"/>
+                <constraint firstItem="p75-qi-ONX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="M5B-wY-pqS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headImageView" destination="p75-qi-ONX" id="2qc-Bc-EzG"/>
+                <outlet property="headLabel" destination="diR-QJ-mxh" id="xbh-Au-Bih"/>
+                <outlet property="settingArrow" destination="s8d-at-hvY" id="bci-9G-C5F"/>
+            </connections>
+            <point key="canvasLocation" x="-303.5" y="-368"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="settings_arrow" width="17" height="17"/>
+    </resources>
+</document>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HSGHMapView">
+            <rect key="frame" x="0.0" y="0.0" width="212" height="269"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WR9-9l-rck">
+                    <rect key="frame" x="0.0" y="0.0" width="212" height="269"/>
+                </mapView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="WR9-9l-rck" secondAttribute="bottom" id="2na-DQ-Nqc"/>
+                <constraint firstItem="WR9-9l-rck" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DS9-1h-6ZY"/>
+                <constraint firstItem="WR9-9l-rck" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kCo-jl-Ldg"/>
+                <constraint firstAttribute="trailing" secondItem="WR9-9l-rck" secondAttribute="trailing" id="vSG-cU-5ZK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mapView" destination="WR9-9l-rck" id="Sag-yj-dT0"/>
+            </connections>
+            <point key="canvasLocation" x="81" y="-37"/>
+        </view>
+    </objects>
+</document>

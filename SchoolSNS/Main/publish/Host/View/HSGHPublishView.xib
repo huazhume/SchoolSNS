@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HSGHPublishView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzc-Yo-BiS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Huf-Qv-L1P">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHr-mB-aq4">
+                            <rect key="frame" x="45" y="429" width="56" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="tBB-cK-2MB"/>
+                                <constraint firstAttribute="height" constant="56" id="w0a-aG-UO5"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="ta_fb_icon_pic"/>
+                            <connections>
+                                <action selector="photoBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Swr-2d-xJM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkF-G1-sfp">
+                            <rect key="frame" x="274" y="429" width="56" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="0aH-vh-bgl"/>
+                                <constraint firstAttribute="height" constant="56" id="N7g-m7-PE8"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="ta_fb_icon_text"/>
+                            <connections>
+                                <action selector="textBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="MDx-Oe-EXd"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="图片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaE-FJ-AZz">
+                            <rect key="frame" x="45" y="500" width="56" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="JAa-Ae-CW9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuG-wb-hjJ">
+                            <rect key="frame" x="274" y="501" width="56" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="fmN-ew-wUv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="视频" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBp-34-9dN">
+                            <rect key="frame" x="159" y="500" width="56" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="AIl-LL-HaY"/>
+                                <constraint firstAttribute="height" constant="21" id="LX3-li-ySG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUR-yA-6FR">
+                            <rect key="frame" x="163" y="585" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="ECS-nH-Hwy"/>
+                                <constraint firstAttribute="height" constant="50" id="hOy-gk-f1S"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                            <state key="normal" image="ta_fb_icon_close"/>
+                            <connections>
+                                <action selector="closeBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="ANz-qI-hEw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tui-8s-jTb" userLabel="VideoButton">
+                            <rect key="frame" x="160" y="429" width="56" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="4ex-J8-Owi"/>
+                                <constraint firstAttribute="height" constant="56" id="Bbb-0g-G2l"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="tab_fb_icon_video"/>
+                            <connections>
+                                <action selector="videoBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="n7j-qC-Dvw"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creat_your_own_vibe" translatesAutoresizingMaskIntoConstraints="NO" id="0cz-Nq-MsB">
+                            <rect key="frame" x="138.5" y="85" width="97" height="132"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="97" id="QOO-yq-dc3"/>
+                                <constraint firstAttribute="height" constant="132" id="RVa-ow-ymU"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="IaE-FJ-AZz" firstAttribute="trailing" secondItem="UHr-mB-aq4" secondAttribute="trailing" id="Gdu-6r-lDc"/>
+                        <constraint firstItem="xuG-wb-hjJ" firstAttribute="leading" secondItem="IkF-G1-sfp" secondAttribute="leading" id="Kg8-Xw-qKq"/>
+                        <constraint firstAttribute="bottom" secondItem="Tui-8s-jTb" secondAttribute="bottom" constant="182" id="Lt5-VM-xOd"/>
+                        <constraint firstItem="0cz-Nq-MsB" firstAttribute="centerX" secondItem="Huf-Qv-L1P" secondAttribute="centerX" id="NvQ-E6-GcR"/>
+                        <constraint firstItem="0cz-Nq-MsB" firstAttribute="top" secondItem="Huf-Qv-L1P" secondAttribute="top" constant="85" id="Pmd-y5-qq3"/>
+                        <constraint firstAttribute="trailing" secondItem="IkF-G1-sfp" secondAttribute="trailing" constant="45" id="YbA-SP-Zy0"/>
+                        <constraint firstAttribute="bottom" secondItem="LUR-yA-6FR" secondAttribute="bottom" constant="32" id="Yzc-yU-Ofk"/>
+                        <constraint firstAttribute="bottom" secondItem="xuG-wb-hjJ" secondAttribute="bottom" constant="145" id="bpI-K7-wan"/>
+                        <constraint firstAttribute="bottom" secondItem="UHr-mB-aq4" secondAttribute="bottom" constant="182" id="ekF-3k-96M"/>
+                        <constraint firstAttribute="bottom" secondItem="UBp-34-9dN" secondAttribute="bottom" constant="146" id="fmX-Yz-Xjj"/>
+                        <constraint firstItem="Tui-8s-jTb" firstAttribute="centerX" secondItem="Huf-Qv-L1P" secondAttribute="centerX" id="gUP-Ng-cG4"/>
+                        <constraint firstAttribute="bottom" secondItem="IaE-FJ-AZz" secondAttribute="bottom" constant="146" id="hWk-AD-aMR"/>
+                        <constraint firstItem="UHr-mB-aq4" firstAttribute="leading" secondItem="Huf-Qv-L1P" secondAttribute="leading" constant="45" id="hat-FO-lH2"/>
+                        <constraint firstItem="LUR-yA-6FR" firstAttribute="centerX" secondItem="Huf-Qv-L1P" secondAttribute="centerX" id="l5k-XC-kOJ"/>
+                        <constraint firstItem="IaE-FJ-AZz" firstAttribute="leading" secondItem="UHr-mB-aq4" secondAttribute="leading" id="nFd-ev-hoX"/>
+                        <constraint firstItem="xuG-wb-hjJ" firstAttribute="trailing" secondItem="IkF-G1-sfp" secondAttribute="trailing" id="rvl-Hb-CKO"/>
+                        <constraint firstAttribute="bottom" secondItem="IkF-G1-sfp" secondAttribute="bottom" constant="182" id="xP8-JJ-hYP"/>
+                        <constraint firstItem="UBp-34-9dN" firstAttribute="centerX" secondItem="Huf-Qv-L1P" secondAttribute="centerX" id="yPR-HP-ofe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Hzc-Yo-BiS" secondAttribute="trailing" id="F8Z-xi-SaT"/>
+                <constraint firstAttribute="bottom" secondItem="Huf-Qv-L1P" secondAttribute="bottom" id="FZf-Kg-vAa"/>
+                <constraint firstItem="Hzc-Yo-BiS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JLb-PQ-R8A"/>
+                <constraint firstAttribute="trailing" secondItem="Huf-Qv-L1P" secondAttribute="trailing" id="NHC-cI-6aE"/>
+                <constraint firstItem="Huf-Qv-L1P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="USA-pC-pcO"/>
+                <constraint firstAttribute="bottom" secondItem="Hzc-Yo-BiS" secondAttribute="bottom" id="dAX-3y-Mi5"/>
+                <constraint firstItem="Huf-Qv-L1P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pkw-ds-Mqr"/>
+                <constraint firstItem="Hzc-Yo-BiS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tG4-fn-rf0"/>
+            </constraints>
+            <connections>
+                <outlet property="bgView" destination="Hzc-Yo-BiS" id="BHY-Ap-PaZ"/>
+                <outlet property="bottomView" destination="Huf-Qv-L1P" id="s5c-vs-gjZ"/>
+                <outlet property="closeBtn" destination="LUR-yA-6FR" id="4Ll-HA-g63"/>
+                <outlet property="closeBtnToBottom" destination="Yzc-yU-Ofk" id="ssF-JZ-FDL"/>
+                <outlet property="left" destination="hat-FO-lH2" id="drP-NL-33d"/>
+                <outlet property="photoBtn" destination="UHr-mB-aq4" id="Cob-xr-J9V"/>
+                <outlet property="photoBtnToBottom" destination="ekF-3k-96M" id="Azc-Ug-hWM"/>
+                <outlet property="photoLab" destination="IaE-FJ-AZz" id="gNG-0v-ZsX"/>
+                <outlet property="photoLabToBottom" destination="hWk-AD-aMR" id="Mw9-Yd-flh"/>
+                <outlet property="right" destination="YbA-SP-Zy0" id="S9g-b8-uC2"/>
+                <outlet property="textBtn" destination="IkF-G1-sfp" id="J94-Nq-VIA"/>
+                <outlet property="textBtnToBottom" destination="xP8-JJ-hYP" id="Tn3-7J-XHn"/>
+                <outlet property="textLab" destination="xuG-wb-hjJ" id="vj4-aB-Lpp"/>
+                <outlet property="textLabToBottom" destination="bpI-K7-wan" id="aLp-Lo-5qe"/>
+                <outlet property="videoBtn" destination="Tui-8s-jTb" id="MZx-lz-rT6"/>
+                <outlet property="videoBtnToBottom" destination="Lt5-VM-xOd" id="FNH-Tq-Zrd"/>
+                <outlet property="videoLabToBottom" destination="fmX-Yz-Xjj" id="zjK-Ot-3ff"/>
+                <outlet property="videoTextLab" destination="UBp-34-9dN" id="Pch-GR-LWb"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="creat_your_own_vibe" width="97" height="132"/>
+        <image name="ta_fb_icon_close" width="44" height="44"/>
+        <image name="ta_fb_icon_pic" width="72" height="72"/>
+        <image name="ta_fb_icon_text" width="72" height="72"/>
+        <image name="tab_fb_icon_video" width="72" height="72"/>
+    </resources>
+</document>
